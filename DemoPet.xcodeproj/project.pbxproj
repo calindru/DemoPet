@@ -16,6 +16,18 @@
 		FA95B5A92B78102400173790 /* DemoPetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95B5A82B78102400173790 /* DemoPetUITestsLaunchTests.swift */; };
 		FA95B5B72B7810E100173790 /* OAuthRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA95B5B62B7810E100173790 /* OAuthRxSwift */; };
 		FA95B5BA2B78115E00173790 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FA95B5B92B78115E00173790 /* RxCocoa */; };
+		FAA103302B78BCF70021E5B0 /* JSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1032F2B78BCF70021E5B0 /* JSONData.swift */; };
+		FAA103322B78BD600021E5B0 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103312B78BD600021E5B0 /* TokenData.swift */; };
+		FAA103342B78BF500021E5B0 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103332B78BF500021E5B0 /* APIEndpoint.swift */; };
+		FAA103362B78BF5E0021E5B0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103352B78BF5E0021E5B0 /* APIService.swift */; };
+		FAA103382B78C0210021E5B0 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103372B78C0210021E5B0 /* Requester.swift */; };
+		FAA1033A2B78C2940021E5B0 /* AnimalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103392B78C2940021E5B0 /* AnimalData.swift */; };
+		FAA1033C2B78C2D70021E5B0 /* BreedsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1033B2B78C2D70021E5B0 /* BreedsData.swift */; };
+		FAA1033F2B78D39E0021E5B0 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAA1033E2B78D39E0021E5B0 /* OAuthSwift */; };
+		FAA103422B79541F0021E5B0 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103412B79541F0021E5B0 /* APITests.swift */; };
+		FAA103442B7967090021E5B0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103432B7967090021E5B0 /* APIError.swift */; };
+		FAA103472B7979CC0021E5B0 /* TokenBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103462B7979CC0021E5B0 /* TokenBody.swift */; };
+		FAA1034A2B7989240021E5B0 /* URLQueryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103492B7989240021E5B0 /* URLQueryEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +58,17 @@
 		FA95B5A22B78102400173790 /* DemoPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA95B5A62B78102400173790 /* DemoPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPetUITests.swift; sourceTree = "<group>"; };
 		FA95B5A82B78102400173790 /* DemoPetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAA1032F2B78BCF70021E5B0 /* JSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONData.swift; sourceTree = "<group>"; };
+		FAA103312B78BD600021E5B0 /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
+		FAA103332B78BF500021E5B0 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		FAA103352B78BF5E0021E5B0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FAA103372B78C0210021E5B0 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		FAA103392B78C2940021E5B0 /* AnimalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalData.swift; sourceTree = "<group>"; };
+		FAA1033B2B78C2D70021E5B0 /* BreedsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsData.swift; sourceTree = "<group>"; };
+		FAA103412B79541F0021E5B0 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		FAA103432B7967090021E5B0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		FAA103462B7979CC0021E5B0 /* TokenBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBody.swift; sourceTree = "<group>"; };
+		FAA103492B7989240021E5B0 /* URLQueryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +78,7 @@
 			files = (
 				FA95B5BA2B78115E00173790 /* RxCocoa in Frameworks */,
 				FA95B5B72B7810E100173790 /* OAuthRxSwift in Frameworks */,
+				FAA1033F2B78D39E0021E5B0 /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +122,10 @@
 		FA95B58A2B78102300173790 /* DemoPet */ = {
 			isa = PBXGroup;
 			children = (
-				FA95B58B2B78102300173790 /* DemoPetApp.swift */,
-				FA95B58D2B78102300173790 /* ContentView.swift */,
+				FAA103482B79890E0021E5B0 /* Library */,
+				FAA1032E2B78BB9B0021E5B0 /* Models */,
+				FAA1032D2B78BB790021E5B0 /* User Interface */,
+				FAA1032C2B78BB6A0021E5B0 /* Networking */,
 				FA95B58F2B78102400173790 /* Assets.xcassets */,
 				FA95B5912B78102400173790 /* Preview Content */,
 			);
@@ -117,6 +143,7 @@
 		FA95B59B2B78102400173790 /* DemoPetTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAA103402B7953FC0021E5B0 /* API Tests */,
 				FA95B59C2B78102400173790 /* DemoPetTests.swift */,
 			);
 			path = DemoPetTests;
@@ -129,6 +156,54 @@
 				FA95B5A82B78102400173790 /* DemoPetUITestsLaunchTests.swift */,
 			);
 			path = DemoPetUITests;
+			sourceTree = "<group>";
+		};
+		FAA1032C2B78BB6A0021E5B0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FAA103332B78BF500021E5B0 /* APIEndpoint.swift */,
+				FAA103352B78BF5E0021E5B0 /* APIService.swift */,
+				FAA103372B78C0210021E5B0 /* Requester.swift */,
+				FAA103432B7967090021E5B0 /* APIError.swift */,
+				FAA103462B7979CC0021E5B0 /* TokenBody.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FAA1032D2B78BB790021E5B0 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				FA95B58B2B78102300173790 /* DemoPetApp.swift */,
+				FA95B58D2B78102300173790 /* ContentView.swift */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		FAA1032E2B78BB9B0021E5B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1032F2B78BCF70021E5B0 /* JSONData.swift */,
+				FAA103312B78BD600021E5B0 /* TokenData.swift */,
+				FAA103392B78C2940021E5B0 /* AnimalData.swift */,
+				FAA1033B2B78C2D70021E5B0 /* BreedsData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAA103402B7953FC0021E5B0 /* API Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FAA103412B79541F0021E5B0 /* APITests.swift */,
+			);
+			path = "API Tests";
+			sourceTree = "<group>";
+		};
+		FAA103482B79890E0021E5B0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FAA103492B7989240021E5B0 /* URLQueryEncoder.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +225,7 @@
 			packageProductDependencies = (
 				FA95B5B62B7810E100173790 /* OAuthRxSwift */,
 				FA95B5B92B78115E00173790 /* RxCocoa */,
+				FAA1033E2B78D39E0021E5B0 /* OAuthSwift */,
 			);
 			productName = DemoPet;
 			productReference = FA95B5882B78102300173790 /* DemoPet.app */;
@@ -226,6 +302,7 @@
 			packageReferences = (
 				FA95B5B52B7810E000173790 /* XCRemoteSwiftPackageReference "OAuthRxSwift" */,
 				FA95B5B82B78115E00173790 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FAA1033D2B78D39E0021E5B0 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
 			);
 			productRefGroup = FA95B5892B78102300173790 /* Products */;
 			projectDirPath = "";
@@ -270,7 +347,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA95B58E2B78102300173790 /* ContentView.swift in Sources */,
+				FAA1034A2B7989240021E5B0 /* URLQueryEncoder.swift in Sources */,
+				FAA103322B78BD600021E5B0 /* TokenData.swift in Sources */,
 				FA95B58C2B78102300173790 /* DemoPetApp.swift in Sources */,
+				FAA103442B7967090021E5B0 /* APIError.swift in Sources */,
+				FAA103302B78BCF70021E5B0 /* JSONData.swift in Sources */,
+				FAA103382B78C0210021E5B0 /* Requester.swift in Sources */,
+				FAA103362B78BF5E0021E5B0 /* APIService.swift in Sources */,
+				FAA103342B78BF500021E5B0 /* APIEndpoint.swift in Sources */,
+				FAA1033C2B78C2D70021E5B0 /* BreedsData.swift in Sources */,
+				FAA103472B7979CC0021E5B0 /* TokenBody.swift in Sources */,
+				FAA1033A2B78C2940021E5B0 /* AnimalData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA95B59D2B78102400173790 /* DemoPetTests.swift in Sources */,
+				FAA103422B79541F0021E5B0 /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +706,14 @@
 				minimumVersion = 6.6.0;
 			};
 		};
+		FAA1033D2B78D39E0021E5B0 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -630,6 +726,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA95B5B82B78115E00173790 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		FAA1033E2B78D39E0021E5B0 /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA1033D2B78D39E0021E5B0 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
