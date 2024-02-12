@@ -18,3 +18,5 @@ struct AnimalData: Decodable {
     let species: String
     let breeds: BreedsData
 }
+
+extension AnimalData: Identifiable {}

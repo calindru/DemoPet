@@ -11,7 +11,9 @@ import SwiftUI
 struct DemoPetApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let itemsViewModel = AnimalsViewModel()
+            let viewModelWrapper = AnimalsViewModelWrapper(animalsObservable: itemsViewModel.animalsObservable)
+            AnimalsView(viewModelWrapper: viewModelWrapper)
         }
     }
 }
