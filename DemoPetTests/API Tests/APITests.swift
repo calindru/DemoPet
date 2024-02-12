@@ -38,19 +38,18 @@ final class APITests: XCTestCase {
         await fulfillment(of: [expectation],timeout: 10.0, enforceOrder: false)
     }
     
-    func testGetAnimals() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testGetAnimals() async throws {
+        let expectation = XCTestExpectation(description: "Obtain a list of animals")
+        
         Requester.shared.getAnimals()
-            .subscribe(onNext: { animalData in
-                XCTAssertTrue(true)
-            }, onError: { error in
-                XCTAssert(false)
-            })
+            .subscribe { event in
+                guard !event.isCompleted else { return }
+                
+                XCTAssertNotNil(event.element, "Could not retrieve the animals.")
+                expectation.fulfill()
+            }
             .disposed(by: disposeBag)
         
+        await fulfillment(of: [expectation],timeout: 10.0, enforceOrder: false)
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 struct BreedsData: Decodable {
     let primary: String
-    let secondary: String
+    let secondary: String?
     let mixed: Bool
     let unknown: Bool
 }

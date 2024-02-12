@@ -14,7 +14,8 @@ class Requester {
     
     let apiService: APIServiceProtocol = APIService()
     
-    func getAnimals() -> Observable<AnimalData> {
+    func getAnimals() -> Observable<AnimalsData> {
         apiService.fetch(request: .build(for: .getAnimals))
     }
+    
 }

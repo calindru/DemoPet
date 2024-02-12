@@ -15,8 +15,16 @@ protocol APIServiceProtocol {
     func fetch<T: Decodable, U: Encodable>(request: URLRequest, body: U) -> Observable<T>
 }
 
+extension TokenData {
+    var authorization: String {
+        token_type + " "  + access_token
+    }
+}
+
 class APIService: APIServiceProtocol {
     private var session: URLSession = URLSession.shared
+    private var token: TokenData?
+    private let disposeBag = DisposeBag()
     
     func fetch<T: Decodable, U: Encodable>(request: URLRequest, body: U) -> Observable<T> {
         var request = request
@@ -31,39 +39,48 @@ class APIService: APIServiceProtocol {
     }
     
     func fetch<T: Decodable>(request: URLRequest) -> Observable<T> {
-        session.rx.request(request)
-//        oauthSwift.rx.authorize(withCallbackURL: request.url, scope: "", state: "")
+        var request = request
         
-//        return Observable.create { observer in
-//            self.oauthSwift.getAccessToken { token, error in
-//                guard let accessToken = token else {
-//                    observer.onError(error ?? NSError(domain: "OAuthError", code: -1, userInfo: nil))
-//                    return
-//                }
-//                
-//                var request = URLRequest(url: url)
-//                request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
-//                
-//                let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//                    if let error = error {
-//                        observer.onError(error)
-//                    } else if let data = data {
-//                        observer.onNext(data)
-//                        observer.onCompleted()
-//                    } else {
-//                        observer.onError(NSError(domain: "DataError", code: -2, userInfo: nil))
-//                    }
-//                }
-//                task.resume()
-//            }
-//            
-//            return Disposables.create()
+        if let token = token {
+            authorized(request: &request, token: token)
+        }
         
+        return Observable.create { observer in
+            let task = self.session.dataTask(with: request) { data, response, error in
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 401 {
+                    // Handle token refresh or authentication failure
+                    _ = self.authenticate().flatMap { newToken -> Observable<T> in
+                        // Update request with new token
+                        var newRequest = request
+                        self.authorized(request: &newRequest, token: newToken)
+                        
+                        // Retry the request with the new token
+                        return self.session.rx.request(newRequest)
+                    }.subscribe(observer)
+                } else if let error = error {
+                    observer.onError(error)
+                } else if let data = data, let decoded = try? JSONDecoder().decode(T.self, from: data) {
+                    observer.onNext(decoded)
+                    observer.onCompleted()
+                } else {
+                    observer.onError(RxError.unknown)
+                }
+            }
+            task.resume()
+            
+            return Disposables.create {
+                task.cancel()
+            }
+        }
     }
     
     func authenticate() -> Observable<TokenData> {
         let tokenBody = TokenBody(client_id: APIConstants.apiKey, client_secret: APIConstants.apiSecret)
         return fetch(request: .build(for: .getToken, method: .post), body: tokenBody)
+    }
+        
+    private func authorized(request: inout URLRequest, token: TokenData) {
+        request.setValue(token.authorization, forHTTPHeaderField: "Authorization")
     }
 }
 

@@ -7,11 +7,14 @@
 
 import Foundation
 
+struct AnimalsData: Decodable {
+    let animals: [AnimalData]
+}
+
 struct AnimalData: Decodable {
-    let id: String
+    let id: Int
     let url: String
     let type: String // TODO: change to enum
     let species: String
     let breeds: BreedsData
-    
 }
