@@ -14,7 +14,6 @@
 		FA95B59D2B78102400173790 /* DemoPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95B59C2B78102400173790 /* DemoPetTests.swift */; };
 		FA95B5A72B78102400173790 /* DemoPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95B5A62B78102400173790 /* DemoPetUITests.swift */; };
 		FA95B5A92B78102400173790 /* DemoPetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95B5A82B78102400173790 /* DemoPetUITestsLaunchTests.swift */; };
-		FA95B5B72B7810E100173790 /* OAuthRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA95B5B62B7810E100173790 /* OAuthRxSwift */; };
 		FA95B5BA2B78115E00173790 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FA95B5B92B78115E00173790 /* RxCocoa */; };
 		FAA103302B78BCF70021E5B0 /* JSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1032F2B78BCF70021E5B0 /* JSONData.swift */; };
 		FAA103322B78BD600021E5B0 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103312B78BD600021E5B0 /* TokenData.swift */; };
@@ -23,7 +22,6 @@
 		FAA103382B78C0210021E5B0 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103372B78C0210021E5B0 /* Requester.swift */; };
 		FAA1033A2B78C2940021E5B0 /* AnimalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103392B78C2940021E5B0 /* AnimalData.swift */; };
 		FAA1033C2B78C2D70021E5B0 /* BreedsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1033B2B78C2D70021E5B0 /* BreedsData.swift */; };
-		FAA1033F2B78D39E0021E5B0 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAA1033E2B78D39E0021E5B0 /* OAuthSwift */; };
 		FAA103422B79541F0021E5B0 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103412B79541F0021E5B0 /* APITests.swift */; };
 		FAA103442B7967090021E5B0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103432B7967090021E5B0 /* APIError.swift */; };
 		FAA103472B7979CC0021E5B0 /* TokenBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103462B7979CC0021E5B0 /* TokenBody.swift */; };
@@ -77,8 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA95B5BA2B78115E00173790 /* RxCocoa in Frameworks */,
-				FA95B5B72B7810E100173790 /* OAuthRxSwift in Frameworks */,
-				FAA1033F2B78D39E0021E5B0 /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,9 +219,7 @@
 			);
 			name = DemoPet;
 			packageProductDependencies = (
-				FA95B5B62B7810E100173790 /* OAuthRxSwift */,
 				FA95B5B92B78115E00173790 /* RxCocoa */,
-				FAA1033E2B78D39E0021E5B0 /* OAuthSwift */,
 			);
 			productName = DemoPet;
 			productReference = FA95B5882B78102300173790 /* DemoPet.app */;
@@ -300,9 +294,7 @@
 			);
 			mainGroup = FA95B57F2B78102300173790;
 			packageReferences = (
-				FA95B5B52B7810E000173790 /* XCRemoteSwiftPackageReference "OAuthRxSwift" */,
 				FA95B5B82B78115E00173790 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				FAA1033D2B78D39E0021E5B0 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
 			);
 			productRefGroup = FA95B5892B78102300173790 /* Products */;
 			projectDirPath = "";
@@ -690,14 +682,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA95B5B52B7810E000173790 /* XCRemoteSwiftPackageReference "OAuthRxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/OAuthSwift/OAuthRxSwift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		FA95B5B82B78115E00173790 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -706,31 +690,13 @@
 				minimumVersion = 6.6.0;
 			};
 		};
-		FAA1033D2B78D39E0021E5B0 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FA95B5B62B7810E100173790 /* OAuthRxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FA95B5B52B7810E000173790 /* XCRemoteSwiftPackageReference "OAuthRxSwift" */;
-			productName = OAuthRxSwift;
-		};
 		FA95B5B92B78115E00173790 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA95B5B82B78115E00173790 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
-		};
-		FAA1033E2B78D39E0021E5B0 /* OAuthSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FAA1033D2B78D39E0021E5B0 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
-			productName = OAuthSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
