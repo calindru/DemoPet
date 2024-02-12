@@ -27,8 +27,13 @@
 		FAA103472B7979CC0021E5B0 /* TokenBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103462B7979CC0021E5B0 /* TokenBody.swift */; };
 		FAA1034A2B7989240021E5B0 /* URLQueryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103492B7989240021E5B0 /* URLQueryEncoder.swift */; };
 		FAFF01A32B7A694B00D6BA0A /* AnimalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF01A22B7A694B00D6BA0A /* AnimalsViewModel.swift */; };
-		FAFF01A52B7A6A0700D6BA0A /* AnimalsViewModelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF01A42B7A6A0700D6BA0A /* AnimalsViewModelWrapper.swift */; };
+		FAFF01A52B7A6A0700D6BA0A /* DataViewModelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF01A42B7A6A0700D6BA0A /* DataViewModelWrapper.swift */; };
 		FAFF01A72B7A783800D6BA0A /* AnimalDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF01A62B7A783800D6BA0A /* AnimalDetailsViewModel.swift */; };
+		FAFF01A92B7A7DD400D6BA0A /* AnimalDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF01A82B7A7DD400D6BA0A /* AnimalDetailsData.swift */; };
+		FAFF01AB2B7A7EF700D6BA0A /* ColorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF01AA2B7A7EF700D6BA0A /* ColorsData.swift */; };
+		FAFF01AD2B7A838E00D6BA0A /* AnimalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF01AC2B7A838E00D6BA0A /* AnimalDetailsView.swift */; };
+		FAFF01B02B7A84F100D6BA0A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FAFF01AF2B7A84F100D6BA0A /* SDWebImageSwiftUI */; };
+		FAFF01B22B7A866E00D6BA0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF01B12B7A866E00D6BA0A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +76,12 @@
 		FAA103462B7979CC0021E5B0 /* TokenBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBody.swift; sourceTree = "<group>"; };
 		FAA103492B7989240021E5B0 /* URLQueryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryEncoder.swift; sourceTree = "<group>"; };
 		FAFF01A22B7A694B00D6BA0A /* AnimalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewModel.swift; sourceTree = "<group>"; };
-		FAFF01A42B7A6A0700D6BA0A /* AnimalsViewModelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewModelWrapper.swift; sourceTree = "<group>"; };
+		FAFF01A42B7A6A0700D6BA0A /* DataViewModelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModelWrapper.swift; sourceTree = "<group>"; };
 		FAFF01A62B7A783800D6BA0A /* AnimalDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsViewModel.swift; sourceTree = "<group>"; };
+		FAFF01A82B7A7DD400D6BA0A /* AnimalDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsData.swift; sourceTree = "<group>"; };
+		FAFF01AA2B7A7EF700D6BA0A /* ColorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsData.swift; sourceTree = "<group>"; };
+		FAFF01AC2B7A838E00D6BA0A /* AnimalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsView.swift; sourceTree = "<group>"; };
+		FAFF01B12B7A866E00D6BA0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFF01B02B7A84F100D6BA0A /* SDWebImageSwiftUI in Frameworks */,
 				FA95B5BA2B78115E00173790 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,11 +185,12 @@
 		FAA1032D2B78BB790021E5B0 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				FAFF01AC2B7A838E00D6BA0A /* AnimalDetailsView.swift */,
+				FAFF01A62B7A783800D6BA0A /* AnimalDetailsViewModel.swift */,
 				FA95B58D2B78102300173790 /* AnimalsView.swift */,
 				FAFF01A22B7A694B00D6BA0A /* AnimalsViewModel.swift */,
-				FAFF01A42B7A6A0700D6BA0A /* AnimalsViewModelWrapper.swift */,
+				FAFF01A42B7A6A0700D6BA0A /* DataViewModelWrapper.swift */,
 				FA95B58B2B78102300173790 /* DemoPetApp.swift */,
-				FAFF01A62B7A783800D6BA0A /* AnimalDetailsViewModel.swift */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -191,6 +202,8 @@
 				FAA103312B78BD600021E5B0 /* TokenData.swift */,
 				FAA103392B78C2940021E5B0 /* AnimalData.swift */,
 				FAA1033B2B78C2D70021E5B0 /* BreedsData.swift */,
+				FAFF01A82B7A7DD400D6BA0A /* AnimalDetailsData.swift */,
+				FAFF01AA2B7A7EF700D6BA0A /* ColorsData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA103492B7989240021E5B0 /* URLQueryEncoder.swift */,
+				FAFF01B12B7A866E00D6BA0A /* Constants.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -229,6 +243,7 @@
 			name = DemoPet;
 			packageProductDependencies = (
 				FA95B5B92B78115E00173790 /* RxCocoa */,
+				FAFF01AF2B7A84F100D6BA0A /* SDWebImageSwiftUI */,
 			);
 			productName = DemoPet;
 			productReference = FA95B5882B78102300173790 /* DemoPet.app */;
@@ -304,6 +319,7 @@
 			mainGroup = FA95B57F2B78102300173790;
 			packageReferences = (
 				FA95B5B82B78115E00173790 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FAFF01AE2B7A84F100D6BA0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = FA95B5892B78102300173790 /* Products */;
 			projectDirPath = "";
@@ -348,9 +364,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA95B58E2B78102300173790 /* AnimalsView.swift in Sources */,
+				FAFF01B22B7A866E00D6BA0A /* Constants.swift in Sources */,
+				FAFF01AB2B7A7EF700D6BA0A /* ColorsData.swift in Sources */,
 				FAA1034A2B7989240021E5B0 /* URLQueryEncoder.swift in Sources */,
 				FAFF01A32B7A694B00D6BA0A /* AnimalsViewModel.swift in Sources */,
 				FAA103322B78BD600021E5B0 /* TokenData.swift in Sources */,
+				FAFF01A92B7A7DD400D6BA0A /* AnimalDetailsData.swift in Sources */,
 				FA95B58C2B78102300173790 /* DemoPetApp.swift in Sources */,
 				FAA103442B7967090021E5B0 /* APIError.swift in Sources */,
 				FAA103302B78BCF70021E5B0 /* JSONData.swift in Sources */,
@@ -358,8 +377,9 @@
 				FAA103382B78C0210021E5B0 /* Requester.swift in Sources */,
 				FAA103362B78BF5E0021E5B0 /* APIService.swift in Sources */,
 				FAA103342B78BF500021E5B0 /* APIEndpoint.swift in Sources */,
-				FAFF01A52B7A6A0700D6BA0A /* AnimalsViewModelWrapper.swift in Sources */,
+				FAFF01A52B7A6A0700D6BA0A /* DataViewModelWrapper.swift in Sources */,
 				FAA1033C2B78C2D70021E5B0 /* BreedsData.swift in Sources */,
+				FAFF01AD2B7A838E00D6BA0A /* AnimalDetailsView.swift in Sources */,
 				FAA103472B7979CC0021E5B0 /* TokenBody.swift in Sources */,
 				FAA1033A2B78C2940021E5B0 /* AnimalData.swift in Sources */,
 			);
@@ -702,6 +722,14 @@
 				minimumVersion = 6.6.0;
 			};
 		};
+		FAFF01AE2B7A84F100D6BA0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -709,6 +737,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA95B5B82B78115E00173790 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		FAFF01AF2B7A84F100D6BA0A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAFF01AE2B7A84F100D6BA0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

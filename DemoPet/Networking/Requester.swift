@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import OAuthSwift
 import RxSwift
 
 class Requester {
@@ -18,4 +17,7 @@ class Requester {
         apiService.fetch(request: .build(for: .getAnimals))
     }
     
+    func getAnimalDetails(id: Int) -> Observable<AnimalDetailsData> {
+        apiService.fetch(request: .build(for: .getAnimalDetails(id: id.description)))
+    }
 }

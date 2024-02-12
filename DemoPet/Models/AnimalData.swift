@@ -13,10 +13,11 @@ struct AnimalsData: Decodable {
 
 struct AnimalData: Decodable {
     let id: Int
-    let url: String
+    let url: URL
     let type: String // TODO: change to enum
     let species: String
     let breeds: BreedsData
+    let name: String
 }
 
 extension AnimalData: Identifiable {}

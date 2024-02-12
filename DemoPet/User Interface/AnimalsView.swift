@@ -6,25 +6,40 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct AnimalsView: View {
-    @ObservedObject var viewModelWrapper: AnimalsViewModelWrapper
+    @ObservedObject var viewModelWrapper: DataViewModelWrapper<AnimalsData>
     
     var body: some View {
-        List(viewModelWrapper.animals) { animal in
+        NavigationView {
+            List(viewModelWrapper.data?.animals ?? []) { animal in
+                let viewModel = AnimalDetailsViewModel(id: animal.id)
+                let wrapper = DataViewModelWrapper<AnimalDetailsData>(dataObservable: viewModel.animalDetailsObservable)
+                NavigationLink(destination: AnimalDetailsView(viewModelWrapper: wrapper)) {
+                    AnimalCellView(animal: animal)
+                }
+            }
+        }
+    }
+}
+
+struct AnimalCellView: View {
+    let animal: AnimalData
+    
+    var body: some View {
+        HStack {
+            Text(animal.name)
+            
+            Spacer()
+            
             Text(animal.species)
-        }
-        .onAppear {
-            
-        }
-        .onTapGesture {
-            
         }
     }
 }
 
 #Preview {
     let itemsViewModel = AnimalsViewModel()
-    let viewModelWrapper = AnimalsViewModelWrapper(animalsObservable: itemsViewModel.animalsObservable)
+    let viewModelWrapper = DataViewModelWrapper<AnimalsData>(dataObservable: itemsViewModel.animalsObservable)
     return AnimalsView(viewModelWrapper: viewModelWrapper)
 }

@@ -52,4 +52,19 @@ final class APITests: XCTestCase {
         
         await fulfillment(of: [expectation],timeout: 10.0, enforceOrder: false)
     }
+    
+    func testGetAnimalDetails() async throws {
+        let expectation = XCTestExpectation(description: "Obtain animal details")
+        
+        Requester.shared.getAnimalDetails(id: 70700899)
+            .subscribe { event in
+                guard !event.isCompleted else { return }
+                
+                XCTAssertNotNil(event.element, "Could not retrieve the animal details.")
+                expectation.fulfill()
+            }
+            .disposed(by: disposeBag)
+        
+        await fulfillment(of: [expectation],timeout: 10.0, enforceOrder: false)
+    }
 }

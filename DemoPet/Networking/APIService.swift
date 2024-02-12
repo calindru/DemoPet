@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import OAuthRxSwift
-import OAuthSwift
 import RxSwift
 
 protocol APIServiceProtocol {

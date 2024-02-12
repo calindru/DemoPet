@@ -12,7 +12,7 @@ struct DemoPetApp: App {
     var body: some Scene {
         WindowGroup {
             let itemsViewModel = AnimalsViewModel()
-            let viewModelWrapper = AnimalsViewModelWrapper(animalsObservable: itemsViewModel.animalsObservable)
+            let viewModelWrapper = DataViewModelWrapper<AnimalsData>(dataObservable: itemsViewModel.animalsObservable)
             AnimalsView(viewModelWrapper: viewModelWrapper)
         }
     }

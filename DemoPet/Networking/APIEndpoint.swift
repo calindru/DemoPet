@@ -34,9 +34,7 @@ enum APIEndpoint {
             url.append(path: "animals")
         case .getAnimalDetails(let id):
             url.append(path: "animals")
-            url.append(queryItems: [
-                URLQueryItem(name: "id", value: id)
-            ])
+            url.append(path: id)
         }
         
         return url
