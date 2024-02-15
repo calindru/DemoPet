@@ -11,4 +11,5 @@ enum APIError: Error {
     case badURL
     case encodingFailed
     case noDataReceived
+    case authorizationFailed
 }
