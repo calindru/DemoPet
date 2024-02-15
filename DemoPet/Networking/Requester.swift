@@ -11,7 +11,7 @@ import RxSwift
 class Requester {
     static var shared = Requester()
     
-    let apiService: APIServiceProtocol = APIService()
+    private let apiService: APIServiceProtocol = APIService()
     
     func getAnimals() -> Observable<AnimalsData> {
         apiService.fetch(request: .build(for: .getAnimals))
