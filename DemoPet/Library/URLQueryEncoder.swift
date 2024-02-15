@@ -11,6 +11,18 @@ struct URLQueryEncoder {
     func encode<T: Encodable>(_ value: T) throws -> Data {
         let encoder = _URLQueryEncoder()
         try value.encode(to: encoder)
+        let encodedString = encoder.components.joined(separator: "&")
+        
+        guard let data = encodedString.data(using: .utf8)  else {
+            throw APIError.encodingFailed
+        }
+        
+        return data
+    }
+    
+    func urlEncode<T: Encodable>(_ value: T) throws -> Data {
+        let encoder = _URLQueryEncoder()
+        try value.encode(to: encoder)
         let encodedString = encoder.components.joined(separator: "&").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         
         guard let data = encodedString.data(using: .utf8)  else {
