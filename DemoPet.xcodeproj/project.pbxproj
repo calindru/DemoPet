@@ -15,7 +15,6 @@
 		FA95B5A72B78102400173790 /* DemoPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95B5A62B78102400173790 /* DemoPetUITests.swift */; };
 		FA95B5A92B78102400173790 /* DemoPetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95B5A82B78102400173790 /* DemoPetUITestsLaunchTests.swift */; };
 		FA95B5BA2B78115E00173790 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FA95B5B92B78115E00173790 /* RxCocoa */; };
-		FAA103302B78BCF70021E5B0 /* JSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1032F2B78BCF70021E5B0 /* JSONData.swift */; };
 		FAA103322B78BD600021E5B0 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103312B78BD600021E5B0 /* TokenData.swift */; };
 		FAA103342B78BF500021E5B0 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103332B78BF500021E5B0 /* APIEndpoint.swift */; };
 		FAA103362B78BF5E0021E5B0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA103352B78BF5E0021E5B0 /* APIService.swift */; };
@@ -64,7 +63,6 @@
 		FA95B5A22B78102400173790 /* DemoPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA95B5A62B78102400173790 /* DemoPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPetUITests.swift; sourceTree = "<group>"; };
 		FA95B5A82B78102400173790 /* DemoPetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPetUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FAA1032F2B78BCF70021E5B0 /* JSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONData.swift; sourceTree = "<group>"; };
 		FAA103312B78BD600021E5B0 /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		FAA103332B78BF500021E5B0 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		FAA103352B78BF5E0021E5B0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 		FAA1032E2B78BB9B0021E5B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FAA1032F2B78BCF70021E5B0 /* JSONData.swift */,
 				FAA103312B78BD600021E5B0 /* TokenData.swift */,
 				FAA103392B78C2940021E5B0 /* AnimalData.swift */,
 				FAA1033B2B78C2D70021E5B0 /* BreedsData.swift */,
@@ -372,7 +369,6 @@
 				FAFF01A92B7A7DD400D6BA0A /* AnimalDetailsData.swift in Sources */,
 				FA95B58C2B78102300173790 /* DemoPetApp.swift in Sources */,
 				FAA103442B7967090021E5B0 /* APIError.swift in Sources */,
-				FAA103302B78BCF70021E5B0 /* JSONData.swift in Sources */,
 				FAFF01A72B7A783800D6BA0A /* AnimalDetailsViewModel.swift in Sources */,
 				FAA103382B78C0210021E5B0 /* Requester.swift in Sources */,
 				FAA103362B78BF5E0021E5B0 /* APIService.swift in Sources */,
